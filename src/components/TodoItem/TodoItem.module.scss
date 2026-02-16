@@ -1,0 +1,18 @@
+
+.item {
+    background-color: lightgray;
+    margin: 12px 0px; 
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    height: auto;
+  
+    color: black;
+}
+
+.item .itemText {
+    text-align: left;
+    flex: 1
+}

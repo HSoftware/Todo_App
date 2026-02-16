@@ -4,6 +4,15 @@
   box-sizing: content-box;
 }
 
+#root {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;

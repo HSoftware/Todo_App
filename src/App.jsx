@@ -1,10 +1,20 @@
 
-import './App.css'
+import styles from "./App.module.scss"
+
+import { TodoMain } from './sections/TodoMain/TodoMain'
+import { TodoAside } from './sections/TodoAside/TodoAside'
+import { TodoBody } from './sections/TodoBody/TodoBody'
+import { TodoHeader } from './sections/TodoHeader/TodoHeader'
 import { TodoCounter } from './components/TodoCounter/TodoCounter'
 import { TodoSearch } from './components/TodoSearch/TodoSearch'
 import { TodoList } from './components/TodoList/TodoList'
 import { CreateTodoButton } from './components/CreateTodoButton/CreateTodoButton'
 import { TodoItem } from './components/TodoItem/TodoItem'
+import { TodoFooter } from './sections/TodoFooter/TodoFooter'
+import { useState } from 'react'
+
+
+
 
 const defaultTodos = [
   { text: 'Aprender React', completed: false },
@@ -20,21 +30,31 @@ const defaultTodos = [
 
 function App() {
 
+  const [theme, setTheme] = useState("dark")
+
   return (
-    <div className='App'>
-      <TodoCounter completed={16} total={25}/>
-      <TodoSearch />
+    <div className={styles.application}>
+      <TodoHeader /> 
+      <TodoMain>
+        <TodoAside />
 
-      <TodoList>
-        {defaultTodos.map(todo => (
-          <TodoItem 
-            key={todo.text}
-            text={todo.text} 
-            completed={todo.completed} />
-        ))}
-      </TodoList>
+        <TodoBody>
+          <TodoCounter completed={16} total={25}/>
+          <TodoSearch />
 
-      <CreateTodoButton />
+          <TodoList>
+            {defaultTodos.map(todo => (
+              <TodoItem 
+                key={todo.text}
+                text={todo.text} 
+                completed={todo.completed} />
+            ))}
+          </TodoList>
+
+          <CreateTodoButton />
+        </TodoBody>
+      </TodoMain>
+      <TodoFooter /> 
     </div>
   )
 }
