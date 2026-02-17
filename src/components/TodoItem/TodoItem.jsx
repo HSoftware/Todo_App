@@ -7,10 +7,16 @@ import styles from "./TodoItem.module.scss"
 export function TodoItem ({ text, completed }) {
   return (
     <>
-      <li className={styles.item}>
-        <span><BsCheck2Circle size={24} /></span>
-        <p className={styles.itemText}>{text}</p>
-        <span><BsFileExcel size={24} /></span>
+      <li >
+        <span className={`${styles.icon} ${completed? styles.iconCompleted: ""}`}>
+          <BsCheck2Circle />
+        </span>
+        <p className={`${styles.itemText} ${completed? styles.itemTextCompleted: ""}`}>
+          {text}
+        </p>
+        <span className={`${styles.icon} ${styles.iconDelete}`}>
+          <BsFileExcel />
+        </span>
       </li>
     </>
   )

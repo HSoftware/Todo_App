@@ -1,0 +1,23 @@
+
+.TodoSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.TodoSearchInput {
+    flex: 1;
+    border-radius: 2px;
+    padding-left: 8px;
+    margin: 12px 0px;
+    font-size: 14px;
+}
+
+.TodoSearch ::placeholder {
+    color: lightgray;
+}
+
+.TodoSearch :focus {
+    outline-color: white;
+}

@@ -1,18 +1,48 @@
 
-.item {
+li {
+    position: relative;
     background-color: lightgray;
     margin: 12px 0px; 
-    padding: 12px;
+    padding: 6px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 12px;
     height: auto;
-  
-    color: black;
+    text-align: left;
 }
 
-.item .itemText {
-    text-align: left;
-    flex: 1
+.icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.iconCompleted {
+    color: green;
+}
+
+.iconDelete {
+    position: absolute;
+    right: -13px;
+    top: -10px;
+}
+
+.iconDelete :hover {
+    color: red;
+}
+
+.itemText{
+    font-weight: 500;
+    flex: 1;
+}
+
+.itemTextCompleted {
+    text-decoration: line-through;
+    color: green;
 }
