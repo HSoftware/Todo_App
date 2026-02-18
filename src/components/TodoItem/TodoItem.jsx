@@ -4,11 +4,14 @@ import { BsCircle } from "react-icons/bs";
 import styles from "./TodoItem.module.scss"
 
 
-export function TodoItem ({ text, completed }) {
+export function TodoItem ({ text, completed, onComplete }) {
   return (
     <>
       <li >
-        <span className={`${styles.icon} ${completed? styles.iconCompleted: ""}`}>
+        <span 
+          className={`${styles.icon} ${completed? styles.iconCompleted: ""}`}
+          onClick={onComplete}
+        >
           <BsCheck2Circle />
         </span>
         <p className={`${styles.itemText} ${completed? styles.itemTextCompleted: ""}`}>

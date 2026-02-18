@@ -31,8 +31,8 @@ const defaultTodos = [
 function App() {
 
   const [theme, setTheme] = useState("dark")
-  const [todos, setTodos] = useState(defaultTodos)         // Estado con los Todos
-  const [searchValue, setSearchValue] = useState("")       // Estado que guarda el valor del input search
+  const [todos, setTodos] = useState(defaultTodos)         // Listado con la totalidad de los Todos
+  const [searchValue, setSearchValue] = useState("")       // Valor del input de la búsqueda
 
   // Estados derivados
   const completedTodos = todos.filter(todo => !!todo.completed).length
@@ -47,6 +47,16 @@ function App() {
     )
   })
   
+  // Funciones
+  const completeTodo = (text) => {                         // Actualiza lista de Todos. text es el identificador (key) del Todo
+    console.log("Texto de entrada", text)
+    const newTodos = [...todos]                            // Crea una copia de los Todos
+    const todoIndex = newTodos.findIndex((todo) => (       // Encuentra el indice del todo correspondiente
+      todo.text == text
+    ))
+    newTodos[todoIndex].completed = true                   // Cambia a completado el todo elegido
+    setTodos(newTodos)                                     // Actualiza la todalidad de Todos
+  }
 
   return (
     <div className={styles.application}>
@@ -65,8 +75,10 @@ function App() {
             {searchedTodos.map(todo => (
               <TodoItem 
                 key={todo.text}
-                text={todo.text} 
-                completed={todo.completed} />
+                text={todo.text}                           //
+                completed={todo.completed}
+                onComplete={() => completeTodo(todo.text)}
+               />
             ))}
           </TodoList>
 

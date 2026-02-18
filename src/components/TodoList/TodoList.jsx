@@ -1,8 +1,11 @@
+import styles from "./TodoList.module.scss"
 
 export function TodoList(props) {
     return (
-        <ul>
-            {props.children}
-        </ul>
+        <div className={styles.todoList}>
+            <ul>
+                {props.children}
+            </ul>
+        </div>
     )
 }
