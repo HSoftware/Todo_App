@@ -49,12 +49,20 @@ function App() {
   
   // Funciones
   const completeTodo = (text) => {                         // Actualiza lista de Todos. text es el identificador (key) del Todo
-    console.log("Texto de entrada", text)
     const newTodos = [...todos]                            // Crea una copia de los Todos
     const todoIndex = newTodos.findIndex((todo) => (       // Encuentra el indice del todo correspondiente
       todo.text == text
     ))
     newTodos[todoIndex].completed = true                   // Cambia a completado el todo elegido
+    setTodos(newTodos)                                     // Actualiza la todalidad de Todos
+  }
+
+  const deleteTodo = (text) => {                           // Borra un todo de la lista. text es el identificador
+    const newTodos = [...todos]                            // Crea una copia de los Todos
+    const todoIndex = newTodos.findIndex((todo) => (       // Encuentra el indice del todo correspondiente
+      todo.text == text
+    ))
+    newTodos.splice(todoIndex, 1)                          // Borra el todo elegido
     setTodos(newTodos)                                     // Actualiza la todalidad de Todos
   }
 
@@ -78,6 +86,7 @@ function App() {
                 text={todo.text}                           //
                 completed={todo.completed}
                 onComplete={() => completeTodo(todo.text)}
+                onDelete={() => deleteTodo(todo.text)}
                />
             ))}
           </TodoList>
