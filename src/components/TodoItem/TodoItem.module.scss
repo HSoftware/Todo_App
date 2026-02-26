@@ -12,31 +12,6 @@ li {
     text-align: left;
 }
 
-.icon {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 48px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.iconCompleted {
-    color: green;
-}
-
-.iconDelete {
-    position: absolute;
-    right: -13px;
-    top: -10px;
-}
-
-.iconDelete :hover {
-    color: red;
-}
-
 .itemText{
     font-weight: 500;
     flex: 1;
