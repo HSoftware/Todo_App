@@ -1,9 +1,14 @@
 
 .todoFooter {
-    background-color: darkgray;
+    background-color: var(--bg-secondary);
+    width: 80%;
+    margin: 0 auto;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0; 
+}
 
+.todoFooter p {
+    padding: 24px 12px 12px 12px;
 }

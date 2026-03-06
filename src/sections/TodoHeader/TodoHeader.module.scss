@@ -1,5 +1,21 @@
 
 .headerContainer {
-    background: darkgray;
+    width: 80%;
+    margin: 0 auto;
+    background: var(--bg-secondary);
     height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--text-primary);
+    padding: 24px;
+
+}
+
+button {
+    margin-right: 24px;
 }

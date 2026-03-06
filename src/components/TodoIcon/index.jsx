@@ -1,10 +1,11 @@
-import { BsCheck2Circle, BsFileExcel } from "react-icons/bs";
+import { BsCheck2Circle, BsFileExcel, BsXCircle } from "react-icons/bs";
 import styles from "./TodoIcon.module.scss"
 
 
     export function TodoIcon({ type, color, onClick }) {
-    const iconType = {
-        "check": (color) => <BsCheck2Circle 
+
+        const iconType = {
+        "check": (color) => <BsCheck2Circle
             fill={color} 
             onClick={onClick} 
         />,
@@ -12,8 +13,12 @@ import styles from "./TodoIcon.module.scss"
             className={`${styles[`icon--delete`]}`} 
             fill={color} 
             onClick={onClick}
-        />
-    }
+        />,
+        "close": (color) => <BsXCircle 
+            fill={color} 
+            onClick={onClick}
+        />,
+        }
 
         return (
             <span className={`${styles.icon}`}>

@@ -1,14 +1,20 @@
 import { BsSearch } from "react-icons/bs";
 import styles from "./TodoSearch.module.scss"
-import { useState } from "react";
+import { useContext } from "react";
+import { TodoContext } from "../TodoContext";
 
 
-export function TodoSearch({ searchValue, setSearchValue }) {
+export function TodoSearch() {
+
+    const {
+        searchValue,
+        setSearchValue,
+    } = useContext(TodoContext)
     
     return (
         <div className={styles.TodoSearch}>
             <span>
-                <BsSearch />
+                <BsSearch className={styles.IconColor}/> 
             </span>
             <input 
             className={styles.TodoSearchInput}

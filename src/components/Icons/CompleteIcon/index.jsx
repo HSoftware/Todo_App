@@ -7,5 +7,5 @@ export function CompleteIcon({ completed, onComplete }) {
             color={completed ? "green" : "gray"}
             onClick={onComplete}
         />
-    )
+    ) 
 }

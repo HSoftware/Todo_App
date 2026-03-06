@@ -15,7 +15,7 @@ export function TodoItem ({ text, completed, onComplete, onDelete }) {
         
         <p className={`${styles.itemText} ${completed? styles.itemTextCompleted: ""}`}>
           {text}
-        </p>
+        </p> 
 
         <DeleteIcon 
           onDelete={onDelete}

@@ -13,6 +13,24 @@
   align-items: center;
 }
 
+[data-theme="light"] {
+  --bg-primary: #F4F4F4;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #EEEEEE;
+  --text-primary: #222222;
+  --icon-color: #333333;
+  --shadow: 0 4px 6px rgba(34, 34, 34, 0.3);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #333333;
+  --bg-secondary: #222222;
+  --bg-tertiary: #444444;
+  --text-primary: #ffffff;
+  --icon-color: #eeeeee;
+  --shadow: 0 4px 6px rgba(225, 225, 225, 0.3);
+}
+
 body {
   font-family: "Monserrat", sans-serif;
   font-optical-sizing: auto;
@@ -24,6 +42,10 @@ body {
   flex-direction: column;
 }
 
+h1, h2, h3, p{
+  color: var(--text-primary);
+}
 
-
-
+li {
+ background-color: var(--bg-tertiary);
+}

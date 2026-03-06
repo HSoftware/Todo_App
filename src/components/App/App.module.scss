@@ -1,11 +1,13 @@
 
 
 .application {
+  margin-top: 12px;
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  background-color: #222222;
+  background-color: var(--bg-primary);
+  
 }
 

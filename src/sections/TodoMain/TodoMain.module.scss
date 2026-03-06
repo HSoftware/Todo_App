@@ -1,10 +1,13 @@
 
 .mainContainer {
+    margin-top: 20px;
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 80%;
+    min-height: 100vh;
     margin: 0 auto;
-    background-color: gray;
-}
+    background-color: var(--bg-secondary);
+} 
