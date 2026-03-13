@@ -14,7 +14,7 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #F4F4F4;
+  --bg-primary: #F7F2FA;
   --bg-secondary: #FFFFFF;
   --bg-tertiary: #EEEEEE;
   --text-primary: #222222;
@@ -23,7 +23,7 @@
 }
 
 [data-theme="dark"] {
-  --bg-primary: #333333;
+  --bg-primary: #25232A;
   --bg-secondary: #222222;
   --bg-tertiary: #444444;
   --text-primary: #ffffff;

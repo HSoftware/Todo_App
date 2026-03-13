@@ -9,12 +9,8 @@ import styles from "./TodoIcon.module.scss"
             fill={color} 
             onClick={onClick} 
         />,
-        "delete": (color) => <BsFileExcel 
+        "delete": (color) => <BsXCircle  
             className={`${styles[`icon--delete`]}`} 
-            fill={color} 
-            onClick={onClick}
-        />,
-        "close": (color) => <BsXCircle 
             fill={color} 
             onClick={onClick}
         />,
